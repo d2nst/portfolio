@@ -124,6 +124,7 @@ header nav ul li.on a::after {
 #introduce .mobile-profile {
   display: none;
 }
+
 #introduce .introduce-box {
   padding: 0 60px;
 }
