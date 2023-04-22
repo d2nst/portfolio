@@ -79,16 +79,25 @@
   }
 
   #introduce .introduce-box {
-    margin-top: 10px;
+    margin: 10px auto 0;
   }
 
   #introduce .introduce-box .text {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
   }
 
   #introduce .introduce-box .text h2 {
     font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  #introduce .introduce-box .text p {
+    font-size: 14px;
+  }
+  #introduce .introduce-box .text span {
+    margin-bottom: 10px;
+    font-size: 14px;
   }
 
   #introduce .introduce-box .list {
