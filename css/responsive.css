@@ -1,0 +1,192 @@
+@charset "utf-8";
+@import url('style.css');
+
+/* 미디어쿼리 - 반응형 */
+@media screen and (max-width: 1170px) and (min-width: 320px) {
+  #introduce .introduce-box {
+    padding: 0 20px;
+  }
+
+  #introduce img {
+    width: 350px;
+  }
+
+  #introduce .introduce-box .text h2 {
+    font-size: 30px;
+  }
+
+  #introduce .introduce-box .text p {
+    font-size: 14px;
+  }
+
+  #introduce .introduce-box .list p {
+    font-size: 14px;
+  }
+
+  #introduce .introduce-box .list .more {
+    margin-left: 20px;
+  }
+
+  #portfolio .inner .project {
+    display: block;
+    padding-top: 60px;
+  }
+
+  #portfolio .project .publishing_contents {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  #portfolio .project .publishing_contents .lang {
+    justify-content: center;
+  }
+
+  #portfolio .project .publishing_contents .btn-group {
+    justify-content: center;
+  }
+
+  #portfolio .project .publishing_contents .first .btn {
+    margin-right: 10px;
+  }
+  #portfolio .project .publishing_contents .first .btn:last-child {
+    margin-right: 0;
+  }
+
+  #portfolio .publishing_img {
+    width: 400px;
+    height: 100%;
+    margin: 30px auto 0;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 480px) {
+  #home .title {
+    font-size: 55px;
+  }
+
+  #introduce .inner {
+    flex-wrap: wrap;
+    padding-top: 90px;
+  }
+
+  #introduce img {
+    display: none;
+  }
+
+  #introduce .mobile-profile {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #introduce .introduce-box {
+    margin-top: 10px;
+  }
+
+  #introduce .introduce-box .text {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  #introduce .introduce-box .text h2 {
+    font-size: 24px;
+  }
+
+  #introduce .introduce-box .list {
+    margin: 10px 0 0 20px;
+  }
+
+  #introduce .introduce-box .list h2 {
+    margin-bottom: 10px;
+  }
+
+  #introduce .introduce-box .list {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  header ul li a {
+    font-size: 12px;
+  }
+  #home .title {
+    font-size: 37px;
+  }
+
+  #home p {
+    font-size: 14px;
+  }
+
+  #introduce .inner {
+    flex-wrap: wrap;
+    padding-top: 90px;
+  }
+
+  #introduce img {
+    display: none;
+  }
+
+  #introduce .mobile-profile {
+    width: 280px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #introduce .introduce-box {
+    margin-top: 10px;
+  }
+
+  #introduce .introduce-box .text {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  #introduce .introduce-box .text p {
+    margin-bottom: 10px;
+  }
+
+  #introduce .introduce-box .text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  #introduce .introduce-box .text span {
+    font-size: 14px;
+  }
+
+  #introduce .introduce-box .list {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  #introduce .introduce-box .list h2 {
+    margin-bottom: 10px;
+  }
+
+  #introduce .introduce-box .list {
+    justify-content: center;
+  }
+  #introduce .introduce-box .list .skill h2,
+  #introduce .introduce-box .list .more h2 {
+    font-size: 18px;
+  }
+  #introduce .introduce-box .list .skill-tree > div:last-child p {
+    font-size: 10px;
+    margin-right: 8px;
+  }
+
+  #introduce .introduce-box .list .more {
+    margin-left: 0;
+  }
+
+  #portfolio .publishing_img {
+    width: 300px;
+  }
+
+  #contact h3 {
+    font-size: 40px;
+  }
+  #contact .infor {
+    flex-wrap: wrap;
+  }
+}
