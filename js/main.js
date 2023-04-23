@@ -1,6 +1,6 @@
 $(function () {
   $('#fullpage').fullpage({
-    anchors: ['firstPage', 'secondPage', 'thirdPage', 'lastPage'],
+    anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
     menu: '#myMenu',
     navigation: true,
     navigationPosition: 'right',

@@ -29,7 +29,7 @@
 
   #portfolio .inner .project {
     display: block;
-    padding-top: 60px;
+    padding-top: 90px;
   }
 
   #portfolio .project .publishing_contents {
@@ -127,7 +127,7 @@
 
   #introduce .inner {
     flex-wrap: wrap;
-    padding-top: 90px;
+    padding-top: 30px;
   }
 
   #introduce img {
@@ -152,6 +152,7 @@
 
   #introduce .introduce-box .text p {
     margin-bottom: 10px;
+    font-size: 12px;
   }
 
   #introduce .introduce-box .text h2 {
@@ -160,7 +161,7 @@
   }
 
   #introduce .introduce-box .text span {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   #introduce .introduce-box .list {
@@ -184,8 +185,20 @@
     margin-right: 8px;
   }
 
+  #introduce .introduce-box .list .skill-tree > div,
+  #introduce .introduce-box .list .more p {
+    margin-bottom: 5px;
+  }
+
   #introduce .introduce-box .list .more {
     margin-left: 0;
+  }
+
+  #portfolio .project .publishing_contents p:first-child {
+    font-size: 16px;
+  }
+  #portfolio .project .publishing_contents h3 {
+    font-size: 30px;
   }
 
   #portfolio .publishing_img {
