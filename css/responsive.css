@@ -27,9 +27,13 @@
     margin-left: 20px;
   }
 
+  #portfolio .swiper-wrapper {
+    height: 620px !important;
+  }
+
   #portfolio .inner .project {
     display: block;
-    padding-top: 90px;
+    padding-top: 60px;
   }
 
   #portfolio .project .publishing_contents {

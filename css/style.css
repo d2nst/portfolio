@@ -398,7 +398,6 @@ header nav ul li.on a::after {
 
 /* --- footer --- */
 .footer {
-  height: 90px;
   background: #000;
   text-align: center;
 }
