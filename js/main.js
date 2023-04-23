@@ -4,6 +4,7 @@ $(function () {
     menu: '#myMenu',
     navigation: true,
     navigationPosition: 'right',
+    autoScrolling: true,
     scrollingSpeed: 1000,
     onLeave: function (origin, destination, direction) {
       // 빠른전환으로 이벤트중복시 fullpage와 swiper전환시점 분리막기

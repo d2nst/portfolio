@@ -398,6 +398,7 @@ header nav ul li.on a::after {
 
 /* --- footer --- */
 .footer {
+  padding: 25px 0;
   background: #000;
   text-align: center;
 }
@@ -406,8 +407,4 @@ header nav ul li.on a::after {
   font-size: 12px;
   margin: 0;
   line-height: 1.8;
-}
-
-.footer-text {
-  padding: 25px 0;
 }
