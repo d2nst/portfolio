@@ -45,7 +45,7 @@ var swiper = new Swiper('.swiper-container', {
       // 처음과 마지막 슬라이드가 아닐경우 fullpage전환 막기
       if (this.activeIndex != 0 && idx != length)
         $.fn.fullpage.setAllowScrolling(false);
-      if (length == 3 && idx == 0) $.fn.fullpage.setAllowScrolling(false); //슬라이드가 3개밖에 없을때
+      if (length == 4 && idx == 0) $.fn.fullpage.setAllowScrolling(false); //슬라이드가 4개밖에 없을때
       // console.log('즉시 : ' + idx);
     },
     slideChangeTransitionEnd: function () {
