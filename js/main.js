@@ -64,5 +64,11 @@ var swiper = new Swiper('.swiper-container', {
   },
 });
 
+// portfolio 프로젝트 1번 상세페이지 리스트 펼쳐보기
+$('button').click(function () {
+  $('.project__list').slideToggle();
+});
+
+// footer 년도 변경
 const thisYear = document.querySelector('.this-year');
 thisYear.textContent = new Date().getFullYear();

@@ -248,6 +248,27 @@ header nav ul li.on a::after {
   font-size: 15px;
   line-height: 1.5;
 }
+
+#portfolio .project .publishing_contents button {
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  color: var(--point-color);
+}
+
+#portfolio .project .publishing_contents button i {
+  margin-left: 5px;
+}
+
+#portfolio .project .publishing_contents p.project__list {
+  font-size: 12px;
+  color: #eeeeee4d;
+  display: none;
+}
+
 #portfolio .project .publishing_contents .progress {
   color: #927c5f;
 }
