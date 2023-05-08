@@ -97,7 +97,7 @@ header nav ul li.on a::after {
 }
 
 #home .title {
-  font-size: 70px;
+  font-size: 60px;
   color: var(--point-color);
   position: relative;
   font-weight: 600;
@@ -105,13 +105,14 @@ header nav ul li.on a::after {
 }
 
 #home .title span {
-  font-size: 80px;
+  font-size: 70px;
   color: transparent;
   font-weight: 700;
   position: relative;
   -webkit-text-stroke: 1px var(--point-color);
   transition: all 0.5s ease;
   display: inline-block;
+  text-transform: uppercase;
 }
 #home .title span::after,
 #home .title span::before {
