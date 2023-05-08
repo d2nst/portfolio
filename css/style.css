@@ -97,7 +97,7 @@ header nav ul li.on a::after {
 }
 
 #home .title {
-  font-size: 60px;
+  font-size: 67px;
   color: var(--point-color);
   position: relative;
   font-weight: 600;
@@ -105,7 +105,7 @@ header nav ul li.on a::after {
 }
 
 #home .title span {
-  font-size: 70px;
+  font-size: 80px;
   color: transparent;
   font-weight: 700;
   position: relative;
@@ -114,7 +114,6 @@ header nav ul li.on a::after {
   display: inline-block;
   text-transform: uppercase;
 }
-#home .title span::after,
 #home .title span::before {
   content: attr(data-text);
   position: absolute;
@@ -133,8 +132,9 @@ header nav ul li.on a::after {
 }
 
 #home p {
-  line-height: 1.5;
-  color: var(--point-color);
+  margin-top: 10px;
+  line-height: 1.4;
+  color: var(--main-color);
 }
 
 /* --- introduce --- */
