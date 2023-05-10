@@ -7,7 +7,7 @@ $(function () {
     scrollingSpeed: 1000,
     onLeave: function (origin, destination, direction) {
       // 빠른전환으로 이벤트중복시 fullpage와 swiper전환시점 분리막기
-      $('#fullpage').on('scroll touchmove mousewheel', function (event) {
+      $('#fullpage').on('scroll', function (event) {
         event.preventDefault();
         event.stopPropagation();
         return false;
