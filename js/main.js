@@ -72,3 +72,23 @@ $('button').click(function () {
 // footer 년도 변경
 const thisYear = document.querySelector('.this-year');
 thisYear.textContent = new Date().getFullYear();
+
+// * mouse cursor custom start *
+let mousePointer = document.querySelector('.cursor');
+let mouseHover = document.querySelectorAll('[data-cursor-class]');
+
+window.addEventListener('mousemove', cursor);
+
+function cursor(e) {
+  mousePointer.style.top = e.pageY + 'px';
+  mousePointer.style.left = e.pageX + 'px';
+}
+
+mouseHover.forEach((link) => {
+  link.addEventListener('mouseleave', () => {
+    mousePointer.classList.remove('link-grow');
+  });
+  link.addEventListener('mouseover', () => {
+    mousePointer.classList.add('link-grow');
+  });
+});

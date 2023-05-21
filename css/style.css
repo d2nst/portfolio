@@ -28,6 +28,7 @@ body {
   font-family: var(--kor-font);
   color: var(--main-color);
   background: var(--main-bgColor);
+  cursor: none;
 }
 
 .inner {
@@ -48,6 +49,29 @@ a {
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   background: var(--white-color);
+}
+
+/* 커스텀 커서 스타일 정의해주기 */
+.cursor {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--point-color);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transition-property: background, transform;
+  transform-origin: 100% 100%;
+  backdrop-filter: sepia(20%);
+  background-size: cover;
+}
+
+.link-grow {
+  transform: scale(3);
+  background-color: #fe990c70;
+  border: none;
 }
 
 /* --- HEADER --- */
