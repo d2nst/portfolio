@@ -3,6 +3,27 @@
 
 /* 미디어쿼리 - 반응형 */
 @media screen and (max-width: 1170px) and (min-width: 320px) {
+  #home .sec-title-wrap h2 {
+    font-size: 70px;
+    letter-spacing: 1.5;
+  }
+
+  #home .sec-title-wrap .title-2 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    text-align: right;
+    font-size: 80px;
+    padding-top: 50px;
+    color: var(--point-color);
+  }
+
+  #home .text-title {
+    position: absolute;
+    right: 50%;
+    top: 100%;
+    font-size: 16px;
+  }
   #introduce .introduce-box {
     padding: 0 20px;
   }
@@ -68,12 +89,26 @@
 }
 
 @media screen and (max-width: 768px) and (min-width: 480px) {
-  #home .title {
-    font-size: 55px;
+  #home .sec-title-wrap h2 {
+    font-size: 60px;
+    letter-spacing: 1.5;
   }
 
-  #home .title span {
+  #home .sec-title-wrap .title-2 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    text-align: right;
     font-size: 60px;
+    padding-top: 50px;
+    color: var(--point-color);
+  }
+
+  #home .text-title {
+    position: absolute;
+    width: 100%;
+    top: 250px;
+    left: 0;
   }
 
   #introduce .inner {
@@ -129,17 +164,25 @@
   header ul li a {
     font-size: 12px;
   }
-  #home .title {
-    font-size: 28px;
+
+  #home .sec-title-wrap h2 {
+    font-size: 48px;
+    letter-spacing: 1px;
   }
 
-  #home .title span {
-    font-size: 30px;
-    letter-spacing: -4px;
+  #home .sec-title-wrap .title-2 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    text-align: right;
+    font-size: 56px;
+    color: var(--point-color);
   }
-
-  #home p {
-    font-size: 12px;
+  #home .text-title {
+    position: absolute;
+    width: 100%;
+    top: 280px;
+    left: 0;
   }
 
   #introduce .inner {
@@ -172,9 +215,9 @@
     font-size: 12px;
   }
 
-  #introduce .introduce-box .text h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+  #introduce .introduce-box h2.text-3 span {
+    font-size: 30px;
+    margin-bottom: 5px;
   }
 
   #introduce .introduce-box .text span {
@@ -224,8 +267,14 @@
 
   #contact h3 {
     font-size: 40px;
+    margin: 0;
   }
   #contact .infor {
     flex-wrap: wrap;
+  }
+
+  #contact .infor .kakaotalk {
+    width: 100px;
+    margin-top: 30px;
   }
 }

@@ -32,6 +32,8 @@
   <link rel="stylesheet" href="./css/jquery.fullPage.css  " />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting.css'>
+  <link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting-cells.css'>
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/responsive.css" />
 
@@ -39,6 +41,10 @@
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="js/jquery.fullPage.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src='https://unpkg.com/splitting/dist/splitting.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js'></script>
   <script defer src="js/main.js"></script>
 
 </head>
@@ -60,20 +66,21 @@
   <main id="fullpage">
     <section class="section" id="home">
       <div class="inner">
-        <h1 class="title">
-          안녕하세요<br>
-          <span>웹</span>
-          <span>퍼</span>
-          <span>블</span>
-          <span>리</span>
-          <span>셔</span>
-          <span>김</span>
-          <span>경</span>
-          <span>진</span>
-          입니다.
-        </h1>
-        <p>다양함과 색다름을 추구하는 웹퍼블리셔입니다. <br>
-          사용자의 편의를 고려하여 웹페이지를 아름답게 만드는 퍼블리싱을 지향합니다.</p>
+        <div class="sec-title-wrap">
+          <h2 class="text title-1 text--perspective" data-scroll="out" data-splitting="">
+            HELLO!<br>
+            I'm Kyoung Jin
+          </h2>
+
+          <h2 data-splitting class="text title-2">
+            Web Publisher
+            <span class="line"></span>
+          </h2>
+        </div>
+        <div class="text-title">
+          <p>다양함과 색다름을 추구하는 웹퍼블리셔입니다. <br>
+            사용자의 편의를 고려하여 웹페이지를 아름답게 만드는 퍼블리싱을 지향합니다.</p>
+        </div>
       </div>
     </section>
     <!-- E:HOME -->
@@ -84,7 +91,7 @@
         <img src="./img/mobile-profile.png" class="mobile-profile" alt="모바일 프로필 이미지" />
         <div class="introduce-box">
           <div class="text">
-            <h2>JUST TO DO IT !</h2>
+            <h2 data-splitting class="text-3">JUST TO DO IT !</h2>
             <p>안녕하세요. 웹퍼블리셔 김경진입니다.
               저의 강점은 <span>긍정적인 사고</span> &amp; <span>남다른 책임감</span> 입니다.<br>
               머릿속에서 생각했던 것이 화면에 구현되는 점에 성취감과 희열을 느껴 퍼블리싱을 시작했습니다.<br>
@@ -251,6 +258,53 @@
               <img src="./img/portfolio(4).png" alt="퍼블리싱 프로젝트4" />
             </div>
           </div>
+          <div class="swiper-slide project">
+            <div class="publishing_contents">
+              <p>ADAPTIVE WEBSITE [PC]</p>
+              <h3>Starbucks Coffee</h3>
+              <p>기존 스타벅스 홈페이지를 클론코딩으로 작업하였습니다.
+              </p>
+              <p class="progress">퍼블리싱 100%</p>
+              <div class="lang">
+                <span class="lang-color h">html</span>
+                <span class="lang-color c">css</span>
+                <span class="lang-color js">js</span>
+              </div>
+              <div class="btn-group first">
+                <div class="btn website">
+                  <a href="https://starbucks-korea-clone.netlify.app/" target="_blank">website</a>
+                </div>
+                <div class="btn demo">
+                  <a href="https://www.starbucks.co.kr/index.do" target="_blank">homepage</a>
+                </div>
+              </div>
+            </div>
+            <div class="publishing_img">
+              <img src="./img/portfolio(5).png" alt="퍼블리싱 프로젝트5" />
+            </div>
+          </div>
+          <div class="swiper-slide project">
+            <div class="publishing_contents">
+              <p>RESPONSIVE WEBSITE [PC, MOB]</p>
+              <h3>Waxcom</h3>
+              <p>데스크탑과 모바일사이즈로 제작한 반응형 사이트입니다.<br> swiper.js와 mixitup 라이브러리를 사용하여 프로젝트 필터링 하였습니다.
+              </p>
+              <p class="progress">퍼블리싱 100%</p>
+              <div class="lang">
+                <span class="lang-color h">html</span>
+                <span class="lang-color c">css</span>
+                <span class="lang-color js">js</span>
+              </div>
+              <div class="btn-group first">
+                <div class="btn website">
+                  <a href="https://jocular-dusk-ee5294.netlify.app/" target="_blank">website</a>
+                </div>
+              </div>
+            </div>
+            <div class="publishing_img">
+              <img src="./img/portfolio(6).png" alt="퍼블리싱 프로젝트6" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -258,8 +312,10 @@
 
     <section class="section" id="contact">
       <div class="inner">
-        <h3>감사합니다 !</h3>
-        <p>모든 문의는 환영입니다.</p>
+        <div class="title">
+          <h3 data-splitting class="text-3">감사합니다 !</h3>
+          <p>모든 문의는 환영입니다!</p>
+        </div>
         <div class="infor">
           <div>
             <div class="email">

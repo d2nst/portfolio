@@ -92,3 +92,19 @@ mouseHover.forEach((link) => {
     mousePointer.classList.add('link-grow');
   });
 });
+
+Splitting();
+
+TweenMax.staggerFrom(
+  '.char',
+  1.7,
+  {
+    y: 70,
+    rotation: 90,
+    rotationX: -50,
+    opacity: 0,
+    transformOrigin: '50% 50%',
+    ease: Back.easeInOut.config(1.7),
+  },
+  0.05
+);
