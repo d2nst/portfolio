@@ -93,6 +93,7 @@ mouseHover.forEach((link) => {
   });
 });
 
+// home 부분 텍스트 애니메이션
 Splitting();
 
 TweenMax.staggerFrom(
