@@ -31,8 +31,8 @@ $(function () {
 });
 
 // swiper
-var length = $('#portfolio .swiper-slide').length;
-var swiper = new Swiper('.swiper-container', {
+const length = $('#portfolio .swiper-slide').length;
+const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
   spaceBetween: 150,
   freeMode: false,
@@ -41,7 +41,7 @@ var swiper = new Swiper('.swiper-container', {
   mousewheel: true,
   on: {
     slideChange: function () {
-      var idx = this.activeIndex;
+      const idx = this.activeIndex;
       // 처음과 마지막 슬라이드가 아닐경우 fullpage전환 막기
       if (this.activeIndex != 0 && idx != length)
         $.fn.fullpage.setAllowScrolling(false);
@@ -49,13 +49,13 @@ var swiper = new Swiper('.swiper-container', {
       // console.log('즉시 : ' + idx);
     },
     slideChangeTransitionEnd: function () {
-      var idx = this.activeIndex;
+      const idx = this.activeIndex;
       // 처음과 마지막 슬라이드일 경우 fullpage전환 풀기
       if (idx == 0 || idx >= length - 1) $.fn.fullpage.setAllowScrolling(true);
       // console.log('전환후 : ' + idx);
     },
     touchMove: function (e) {
-      var startY = e.touches.startY;
+      const startY = e.touches.startY;
       setTimeout(function () {
         if (startY > e.touches.currentY) swiper.slideNext();
         else swiper.slidePrev();
