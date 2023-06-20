@@ -68,26 +68,12 @@
     height: 100% !important;
   }
 
-  #portfolio .inner .project {
-    display: block;
-    padding-top: 60px;
-  }
-
   #portfolio .project .publishing_contents {
-    text-align: center;
     margin-right: 0;
   }
 
-  #portfolio .project .publishing_contents button {
-    text-align: center;
-  }
-
-  #portfolio .project .publishing_contents .lang {
-    justify-content: center;
-  }
-
   #portfolio .project .publishing_contents .btn-group {
-    justify-content: center;
+    width: 80%;
   }
 
   #portfolio .project .publishing_contents .first .btn {
@@ -98,9 +84,13 @@
   }
 
   #portfolio .publishing_img {
-    width: 400px;
-    height: 100%;
+    width: 350px;
+    height: auto;
     margin: 30px auto 0;
+  }
+
+  #portfolio .publishing_img img {
+    width: 100%;
   }
 }
 
@@ -172,6 +162,24 @@
   }
 
   #introduce .introduce-box .list {
+    justify-content: center;
+  }
+
+  #portfolio .inner .project {
+    display: block;
+    padding-top: 100px;
+  }
+
+  #portfolio .project .publishing_contents {
+    text-align: center;
+  }
+
+  #portfolio .project .publishing_contents .btn-group {
+    justify-content: center;
+    width: 100%;
+  }
+
+  #portfolio .project .publishing_contents .lang {
     justify-content: center;
   }
 }
@@ -269,7 +277,23 @@
   #introduce .introduce-box .list .more {
     margin-left: 0;
   }
+  #portfolio .inner .project {
+    display: block;
+    padding-top: 100px;
+  }
 
+  #portfolio .project .publishing_contents {
+    text-align: center;
+  }
+
+  #portfolio .project .publishing_contents .btn-group {
+    justify-content: center;
+    width: 100%;
+  }
+
+  #portfolio .project .publishing_contents .lang {
+    justify-content: center;
+  }
   #portfolio .project .publishing_contents p:first-child {
     font-size: 16px;
   }
@@ -280,7 +304,6 @@
   #portfolio .publishing_img {
     width: 300px;
   }
-
   #contact h3 {
     font-size: 40px;
     margin: 0;
