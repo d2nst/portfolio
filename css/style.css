@@ -370,9 +370,12 @@ header nav ul li.on a::after {
 }
 
 #portfolio .project .publishing_contents p.project__list {
-  font-size: 12px;
-  color: #eeeeee4d;
-  display: none;
+  font-size: 13px;
+  color: var(--main-color);
+  border-top: 1px dashed #eeeeee4d;
+  border-bottom: 1px dashed #eeeeee4d;
+  margin: 6px 0;
+  padding: 10px 0;
 }
 
 #portfolio .project .publishing_contents .progress {
