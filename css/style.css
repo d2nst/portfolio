@@ -29,6 +29,7 @@ body {
   color: var(--main-color);
   background: var(--main-bgColor);
   cursor: none;
+  font-size: 15px;
 }
 
 .inner {
@@ -55,7 +56,7 @@ a {
 .cursor {
   width: 2rem;
   height: 2rem;
-  border: 2px solid var(--point-color);
+  border: 0.125rem solid var(--point-color);
   border-radius: 50%;
   position: absolute;
   z-index: 1000;
@@ -80,7 +81,7 @@ header {
   left: 0;
   right: 0;
   top: 0;
-  padding: 30px 0;
+  padding: 1.875rem 0;
   border-bottom: 1px solid #a1a1a115;
   z-index: 99;
   background: var(--main-bgColor);
@@ -92,7 +93,7 @@ header nav ul {
 }
 
 header nav ul li {
-  margin: 0 20px;
+  margin: 0 1.25rem;
 }
 
 header nav ul li.on a {
@@ -103,13 +104,13 @@ header nav ul li.on a {
 header nav ul li.on a::after {
   content: '';
   display: block;
-  width: 6px;
-  height: 6px;
+  width: 0.375rem;
+  height: 0.375rem;
   border-radius: 100%;
   transform-origin: center;
   background: var(--point-color);
   position: absolute;
-  top: -15px;
+  top: -0.9375rem;
   left: 42%;
   transition: all 0.3s ease-in-out;
 }
@@ -124,13 +125,13 @@ header nav ul li.on a::after {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  top: -70px;
+  top: -4.375rem;
   font-family: var(--eng-font);
   letter-spacing: -5px;
 }
 
 .sec-title-wrap .text {
-  font-size: 80px;
+  font-size: 5rem;
   color: #fff;
   position: relative;
   font-weight: 600;
@@ -143,7 +144,7 @@ header nav ul li.on a::after {
 }
 
 .text-title {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.3;
   color: var(--main-color);
 }
@@ -153,14 +154,14 @@ header nav ul li.on a::after {
   top: 100%;
   left: 50%;
   text-align: right;
-  font-size: 100px;
+  font-size: 6.25rem;
   color: var(--point-color);
 }
 
 .title-2 .line {
   content: '';
   position: absolute;
-  height: 2px;
+  height: 0.125rem;
   width: 100%;
   display: block;
   background-color: var(--point-color);
@@ -204,11 +205,11 @@ header nav ul li.on a::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 50px;
+  padding-top: 3.125rem;
 }
 
 #introduce img {
-  width: 400px;
+  width: 25rem;
 }
 
 #introduce .mobile-profile {
@@ -216,17 +217,17 @@ header nav ul li.on a::after {
 }
 
 #introduce .introduce-box {
-  padding: 0 60px;
+  padding: 0 3.75rem;
 }
 #introduce .introduce-box .text {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   line-height: 1.3;
 }
 
 .text-3 .char {
-  font-size: 38px;
+  font-size: 2.375rem;
   color: var(--point-color);
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   font-family: var(--eng-font);
   transform-origin: center 50%;
   animation: wiggle-char 1s linear infinite both;
@@ -247,7 +248,7 @@ header nav ul li.on a::after {
 }
 
 #introduce .introduce-box .text p {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 
 #introduce .introduce-box .text span {
@@ -260,63 +261,63 @@ header nav ul li.on a::after {
 
 #introduce .introduce-box .list {
   display: flex;
-  margin-top: 40px;
-  margin-left: 20px;
+  margin-top: 2.5rem;
+  margin-left: 1.25rem;
 }
 
 #introduce .introduce-box .list h2 {
-  font-size: 25px;
+  font-size: 1.5625rem;
   color: var(--point-color);
   position: relative;
   font-family: var(--eng-font);
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 #introduce .introduce-box .list h2::before {
   content: '';
   display: block;
-  width: 6px;
-  height: 6px;
+  width: 0.375rem;
+  height: 0.375rem;
   background: var(--main-color);
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  left: -20px;
+  left: -1.25rem;
   transform: translateY(-50%);
 }
 
 #introduce .introduce-box .list .skill-tree > div {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 #introduce .introduce-box .list .skill-tree p {
-  margin: 0 26px 0 0;
+  margin: 0 1.625rem 0 0;
   font-family: var(--eng-font);
 }
 
 #introduce .introduce-box .list .skill-tree span {
-  width: 10px;
-  height: 10px;
+  width: 0.625rem;
+  height: 0.625rem;
   border: 1px dashed var(--main-color);
   border-radius: 50%;
-  margin-right: 5px;
+  margin-right: 0.3125rem;
 }
 
 #introduce .introduce-box .list .skill-tree .check {
-  width: 10px;
-  height: 10px;
+  width: 0.625rem;
+  height: 0.625rem;
   background: var(--main-color);
   border-radius: 50%;
 }
 
 #introduce .introduce-box .list .more {
-  margin-left: 60px;
+  margin-left: 3.75rem;
 }
 
 #introduce .introduce-box .list .more p {
-  margin-bottom: 13px;
+  margin-bottom: 0.8125rem;
 }
 
 #introduce .introduce-box .list .more p:last-child {
@@ -331,7 +332,7 @@ header nav ul li.on a::after {
 }
 
 #portfolio .project .publishing_contents {
-  margin-right: 170px;
+  margin-right: 10.625rem;
 }
 
 #portfolio .project .publishing_contents p:first-child,
@@ -340,18 +341,18 @@ header nav ul li.on a::after {
 }
 
 #portfolio .project .publishing_contents p:first-child {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: var(--eng-font);
 }
 
 #portfolio .project .publishing_contents h3 {
-  font-size: 35px;
-  margin-bottom: 18px;
+  font-size: 2.1875rem;
+  margin-bottom: 1.125rem;
   font-family: var(--eng-font);
 }
 
 #portfolio .project .publishing_contents p {
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.5;
 }
 
@@ -361,21 +362,21 @@ header nav ul li.on a::after {
   border: none;
   cursor: pointer;
   text-align: left;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--point-color);
 }
 
 #portfolio .project .publishing_contents button i {
-  margin-left: 5px;
+  margin-left: 0.3125rem;
 }
 
 #portfolio .project .publishing_contents p.project__list {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--main-color);
   border-top: 1px dashed #eeeeee4d;
   border-bottom: 1px dashed #eeeeee4d;
-  margin: 6px 0;
-  padding: 10px 0;
+  margin: 0.375rem 0;
+  padding: 0.625rem 0;
 }
 
 #portfolio .project .publishing_contents .progress {
@@ -386,18 +387,18 @@ header nav ul li.on a::after {
   display: flex;
   align-items: center;
   font-family: var(--eng-font);
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 #portfolio .project .publishing_contents .lang .lang-color {
-  width: 60px;
-  height: 30px;
-  border-radius: 15px;
-  line-height: 30px;
+  width: 3.75rem;
+  height: 1.875rem;
+  border-radius: 0.9375rem;
+  line-height: 1.875rem;
   text-align: center;
   color: var(--white-color);
-  margin-left: 10px;
-  margin-top: 10px;
+  margin-left: 0.625rem;
+  margin-top: 0.625rem;
 }
 
 #portfolio .project .publishing_contents .lang .lang-color:first-child {
@@ -427,19 +428,19 @@ header nav ul li.on a::after {
 }
 
 #portfolio .project .publishing_contents .first .btn {
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 #portfolio .project .publishing_contents .first .btn:last-child {
   margin-right: 0;
 }
 
 #portfolio .project .publishing_contents .btn {
-  width: 200px;
-  height: 45px;
+  width: 12.5rem;
+  height: 2.8125rem;
   border: 1px solid var(--main-color);
-  border-radius: 10px;
+  border-radius: 0.625rem;
   text-align: center;
-  line-height: 42px;
+  line-height: 2.8125rem;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
@@ -448,7 +449,7 @@ header nav ul li.on a::after {
   display: inline-block;
   width: 100%;
   height: 100%;
-  font-size: 15px;
+  font-size: 0.9375rem;
   color: var(--main-color);
   font-family: var(--eng-font);
 }
@@ -463,7 +464,7 @@ header nav ul li.on a::after {
 }
 
 #portfolio .publishing_img {
-  width: 600px;
+  width: 37.5rem;
 }
 
 #portfolio .publishing_img img {
@@ -476,11 +477,11 @@ header nav ul li.on a::after {
 }
 
 #contact .inner {
-  padding-top: 50px;
+  padding-top: 3.125rem;
 }
 
 #contact h3.text-3 span {
-  font-size: 50px;
+  font-size: 3.125rem;
   color: var(--point-color);
 }
 
@@ -490,47 +491,47 @@ header nav ul li.on a::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px;
+  padding: 3.75rem;
 }
 
 #contact p {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   position: relative;
   font-family: var(--kor-font);
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 #contact p::before {
   content: '';
   display: block;
-  width: 60px;
+  width: 3.75rem;
   height: 1px;
   background: var(--main-color);
   position: absolute;
   left: 50%;
-  top: 50px;
+  top: 3.125rem;
   transform: translateX(-50%);
 }
 
 #contact .infor > div > div i {
   display: flex;
   align-items: center;
-  margin-right: 30px;
+  margin-right: 1.875rem;
 }
 
 #contact .infor > div > div {
   display: flex;
   justify-content: flex-start;
-  margin-right: 40px;
-  margin-bottom: 20px;
+  margin-right: 2.5rem;
+  margin-bottom: 1.25rem;
 }
 
 #contact .infor > div > div a {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 #contact .infor .kakaotalk {
-  width: 80px;
+  width: 5rem;
 }
 
 #contact .infor .kakaotalk img {
@@ -539,13 +540,13 @@ header nav ul li.on a::after {
 
 /* --- footer --- */
 .footer {
-  padding: 25px 0;
+  padding: 1.5625rem 0;
   background: #000;
   text-align: center;
 }
 
 .footer p {
-  font-size: 12px;
+  font-size: 0.875rem;
   margin: 0;
   line-height: 1.8;
 }

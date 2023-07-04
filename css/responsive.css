@@ -4,7 +4,7 @@
 /* 미디어쿼리 - 반응형 */
 @media screen and (min-width: 1200px) {
   #home .sec-title-wrap h2 {
-    font-size: 80px;
+    font-size: 5rem;
     letter-spacing: 1.5;
   }
 
@@ -13,14 +13,14 @@
     top: 100%;
     left: 50%;
     text-align: right;
-    font-size: 100px;
-    padding-top: 50px;
+    font-size: 6.25rem;
+    padding-top: 3.125rem;
     color: var(--point-color);
   }
 }
 @media screen and (max-width: 1170px) and (min-width: 320px) {
   #home .sec-title-wrap h2 {
-    font-size: 70px;
+    font-size: 4.375rem;
     letter-spacing: 1.5;
   }
 
@@ -29,8 +29,8 @@
     top: 100%;
     left: 50%;
     text-align: right;
-    font-size: 80px;
-    padding-top: 50px;
+    font-size: 5rem;
+    padding-top: 3.125rem;
     color: var(--point-color);
   }
 
@@ -38,30 +38,32 @@
     position: absolute;
     right: 50%;
     top: 100%;
-    font-size: 16px;
+    font-size: 1rem;
   }
   #introduce .introduce-box {
-    padding: 0 20px;
+    padding: 0 1.25rem;
   }
 
   #introduce img {
-    width: 350px;
+    width: 21.875rem;
   }
 
   #introduce .introduce-box .text h2 {
-    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 1;
   }
 
-  #introduce .introduce-box .text p {
-    font-size: 14px;
-  }
-
+  #introduce .introduce-box .text p,
   #introduce .introduce-box .list p {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   #introduce .introduce-box .list .more {
-    margin-left: 20px;
+    margin-left: 0;
+  }
+
+  #introduce .introduce-box .list .more h2 {
+    margin-right: 1.875rem;
   }
 
   #portfolio .swiper-wrapper {
@@ -77,26 +79,33 @@
   }
 
   #portfolio .project .publishing_contents .first .btn {
-    margin-right: 10px;
+    margin-right: 0.625rem;
   }
   #portfolio .project .publishing_contents .first .btn:last-child {
     margin-right: 0;
   }
 
   #portfolio .publishing_img {
-    width: 350px;
+    width: 21.875rem;
     height: auto;
-    margin: 30px auto 0;
+    margin: 1.875rem auto 0;
   }
 
   #portfolio .publishing_img img {
     width: 100%;
   }
+
+  .footer {
+    padding: 1.5625rem 1rem;
+  }
 }
 
 @media screen and (max-width: 768px) and (min-width: 480px) {
+  #home .inner {
+    top: -5%;
+  }
   #home .sec-title-wrap h2 {
-    font-size: 60px;
+    font-size: 3.75rem;
     letter-spacing: 1.5;
   }
 
@@ -105,21 +114,21 @@
     top: 100%;
     left: 50%;
     text-align: right;
-    font-size: 60px;
-    padding-top: 50px;
+    font-size: 3.75rem;
+    padding-top: 3.125rem;
     color: var(--point-color);
   }
 
   #home .text-title {
     position: absolute;
     width: 100%;
-    top: 250px;
+    top: 21rem;
     left: 0;
   }
 
   #introduce .inner {
     flex-wrap: wrap;
-    padding-top: 90px;
+    padding-top: 5.625rem;
   }
 
   #introduce img {
@@ -127,47 +136,57 @@
   }
 
   #introduce .mobile-profile {
+    width: 15rem;
     display: block;
     margin: 0 auto;
   }
 
   #introduce .introduce-box {
-    margin: 10px auto 0;
+    margin: 0.625rem auto 0;
   }
 
   #introduce .introduce-box .text {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     text-align: center;
   }
 
-  #introduce .introduce-box .text h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
   #introduce .introduce-box .text p {
-    font-size: 14px;
-  }
-  #introduce .introduce-box .text span {
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-
-  #introduce .introduce-box .list {
-    margin: 10px 0 0 20px;
-  }
-
-  #introduce .introduce-box .list h2 {
-    margin-bottom: 10px;
+    font-size: 0.8rem;
   }
 
   #introduce .introduce-box .list {
     justify-content: center;
+    flex-direction: column;
+    margin: 0.625rem 0 0 1.25rem;
+  }
+
+  #introduce .introduce-box .list h2 {
+    margin-bottom: 0.625rem;
+    font-size: 1.2rem;
+  }
+
+  #introduce .introduce-box .list .more h2 {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  #introduce .introduce-box .list .more p {
+    margin-bottom: 0;
+    margin-left: 0.625rem;
+    align-items: center;
+    display: flex;
+  }
+
+  #introduce .introduce-box .list .skill-tree,
+  .more {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   #portfolio .inner .project {
     display: block;
-    padding-top: 100px;
+    padding-top: 6.25rem;
   }
 
   #portfolio .project .publishing_contents {
@@ -181,17 +200,24 @@
 
   #portfolio .project .publishing_contents .lang {
     justify-content: center;
+    margin-bottom: 1.625rem;
+  }
+
+  #portfolio .publishing_img {
+    width: 15rem;
+    height: auto;
+    margin: 1rem auto 0;
   }
 }
 
 @media screen and (max-width: 479px) {
   header ul li a {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   #home .sec-title-wrap h2 {
-    font-size: 48px;
-    letter-spacing: 1px;
+    font-size: 3rem;
+    letter-spacing: 0.0625rem;
   }
 
   #home .sec-title-wrap .title-2 {
@@ -199,19 +225,23 @@
     top: 100%;
     left: 0;
     text-align: right;
-    font-size: 56px;
+    font-size: 3.5rem;
     color: var(--point-color);
   }
   #home .text-title {
     position: absolute;
     width: 100%;
-    top: 280px;
+    top: 17.5rem;
     left: 0;
+  }
+
+  #home .text-title p {
+    font-size: 0.875rem;
   }
 
   #introduce .inner {
     flex-wrap: wrap;
-    padding-top: 30px;
+    padding-top: 2rem;
   }
 
   #introduce img {
@@ -219,42 +249,42 @@
   }
 
   #introduce .mobile-profile {
-    width: 280px;
+    width: 14rem;
     display: block;
     margin: 0 auto;
   }
 
   #introduce .introduce-box {
-    margin-top: 10px;
+    margin-top: 0.625rem;
   }
 
   #introduce .introduce-box .text {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     text-align: center;
   }
 
   #introduce .introduce-box .text p {
-    margin-bottom: 10px;
-    font-size: 12px;
+    margin-bottom: 0.3rem;
+    font-size: 0.75rem;
   }
 
   #introduce .introduce-box h2.text-3 span {
-    font-size: 30px;
-    margin-bottom: 5px;
+    font-size: 1.875rem;
+    margin-bottom: 0.3125rem;
   }
 
   #introduce .introduce-box .text span {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
 
   #introduce .introduce-box .list {
-    margin-top: 10px;
+    margin-top: 0.625rem;
     margin-left: 0;
   }
 
   #introduce .introduce-box .list h2 {
-    margin-bottom: 10px;
+    margin-bottom: 0.2rem;
   }
 
   #introduce .introduce-box .list {
@@ -262,16 +292,16 @@
   }
   #introduce .introduce-box .list .skill h2,
   #introduce .introduce-box .list .more h2 {
-    font-size: 18px;
+    font-size: 1rem;
   }
   #introduce .introduce-box .list .skill-tree > div:last-child p {
-    font-size: 10px;
-    margin-right: 8px;
+    font-size: 0.625rem;
+    margin-right: 0.5rem;
   }
 
   #introduce .introduce-box .list .skill-tree > div,
   #introduce .introduce-box .list .more p {
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
   }
 
   #introduce .introduce-box .list .more {
@@ -279,33 +309,52 @@
   }
   #portfolio .inner .project {
     display: block;
-    padding-top: 100px;
+    padding-top: 5rem;
   }
 
   #portfolio .project .publishing_contents {
     text-align: center;
   }
 
+  #portfolio .project .publishing_contents p {
+    font-size: 0.875rem;
+  }
+  #portfolio .project .publishing_contents p.project__list {
+    font-size: 0.6rem;
+  }
   #portfolio .project .publishing_contents .btn-group {
     justify-content: center;
     width: 100%;
   }
+  #portfolio .project .publishing_contents .btn {
+    width: 8rem;
+    height: 2.5rem;
+    line-height: 2.3rem;
+  }
+
+  #portfolio .project .publishing_contents .btn a {
+    font-size: 0.87rem;
+  }
+
+  #portfolio .project .publishing_contents p:first-child {
+    font-size: 1rem;
+  }
+  #portfolio .project .publishing_contents h3 {
+    font-size: 1.875rem;
+  }
 
   #portfolio .project .publishing_contents .lang {
     justify-content: center;
-  }
-  #portfolio .project .publishing_contents p:first-child {
-    font-size: 16px;
-  }
-  #portfolio .project .publishing_contents h3 {
-    font-size: 30px;
+    margin-bottom: 1.3rem;
   }
 
   #portfolio .publishing_img {
-    width: 300px;
+    width: 16rem;
+    height: auto;
+    margin: 1rem auto 0;
   }
   #contact h3 {
-    font-size: 40px;
+    font-size: 2.5rem;
     margin: 0;
   }
   #contact .infor {
@@ -313,7 +362,7 @@
   }
 
   #contact .infor .kakaotalk {
-    width: 100px;
-    margin-top: 30px;
+    width: 6.25rem;
+    margin-top: 1.875rem;
   }
 }
