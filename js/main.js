@@ -7,7 +7,7 @@ $(function () {
     scrollingSpeed: 1000,
     onLeave: function (origin, destination, direction) {
       // 빠른전환으로 이벤트중복시 fullpage와 swiper전환시점 분리막기
-      $('#fullpage').on('scroll', function (event) {
+      $('#fullpage').on('scroll touchmove mousewheel', function (event) {
         event.preventDefault();
         event.stopPropagation();
         return false;
@@ -45,7 +45,7 @@ const swiper = new Swiper('.swiper-container', {
       // 처음과 마지막 슬라이드가 아닐경우 fullpage전환 막기
       if (this.activeIndex != 0 && idx != length)
         $.fn.fullpage.setAllowScrolling(false);
-      if (length == 4 && idx == 0) $.fn.fullpage.setAllowScrolling(false); //슬라이드가 4개밖에 없을때
+      if (length == 7 && idx == 0) $.fn.fullpage.setAllowScrolling(false); //슬라이드가 4개밖에 없을때
       // console.log('즉시 : ' + idx);
     },
     slideChangeTransitionEnd: function () {
