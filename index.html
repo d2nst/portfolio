@@ -153,7 +153,6 @@
       </div>
     </section>
     <!-- E:INTRODUCE -->
-
     <section class="section swiper" id="portfolio">
       <div class="inner swiper-container">
         <div class="swiper-wrapper fp-auto-height">
@@ -170,12 +169,15 @@
                 <span class="lang-color c">css</span>
                 <span class="lang-color js">js</span>
               </div>
-              <div class="btn-group first">
+              <div class="btn-group">
                 <div class="btn website">
                   <a href="https://d2nst.github.io/minimal-site/" target="_blank">website</a>
                 </div>
                 <div class="btn demo">
                   <a href="https://minimal-goods.webflow.io/" target="_blank">demo</a>
+                </div>
+                <div class="btn popup">
+                  <button class="more__btn" data-modal-id="myModal1">more</button>
                 </div>
               </div>
             </div>
@@ -190,21 +192,22 @@
               <p>스킨푸드 홈페이지 리디자인<br>
                 총 5페이지 디자인, 퍼블리싱 진행했습니다.
               </p>
-              <p class="project__list"> 1.메인페이지 2.상품페이지(베스트상품) 2-1.상품 상세페이지(미나리패드)<br> 3.커뮤니티(공지사항) 4.어바웃스킨푸드(브랜드스토리)
-              </p>
               <p class="progress">디자인 100% | 퍼블리싱 100%</p>
               <div class="lang">
                 <span class="lang-color h">html</span>
                 <span class="lang-color c">css</span>
                 <span class="lang-color js">js</span>
               </div>
-              <div class="btn-group first">
+              <div class="btn-group">
                 <div class="btn website">
                   <a href="https://d2nst.github.io/theskinfood/" target="_blank">website</a>
                 </div>
                 <div class="btn design">
                   <a href="https://xd.adobe.com/view/c71f5841-7557-408a-ae54-8fe524f7e683-924c/grid"
                     target="_blank">design</a>
+                </div>
+                <div class="btn popup">
+                  <button class="more__btn" data-modal-id="myModal2">more</button>
                 </div>
               </div>
             </div>
@@ -219,20 +222,21 @@
               <p>
                 디자인 데모 사이트를 참고하여 퍼블리싱 했습니다.<br>
                 gsap, jarallax 등 동적인 요소의 라이브러리를 사용했습니다.<br>
-              <p class="project__list">우측 상단 햄버거바 클릭 시, 총 5가지의 메뉴의 페이지를 확인하실 수 있습니다.</p>
-              </p>
               <p class="progress">퍼블리싱 100%</p>
               <div class="lang">
                 <span class="lang-color h">html</span>
                 <span class="lang-color c">css</span>
                 <span class="lang-color js">js</span>
               </div>
-              <div class="btn-group first">
+              <div class="btn-group">
                 <div class="btn website">
                   <a href="https://d2nst.github.io/minimal-style-site/" target="_blank">website</a>
                 </div>
                 <div class="btn demo">
                   <a href="https://untree.co/demos/style" target="_blank">demo</a>
+                </div>
+                <div class="btn popup">
+                  <button class="more__btn" data-modal-id="myModal3">more</button>
                 </div>
               </div>
             </div>
@@ -256,6 +260,9 @@
                 <div class="btn website">
                   <a href="https://d2nst.github.io/web-portfolio/" target="_blank">website</a>
                 </div>
+                <div class="btn popup">
+                  <button class="more__btn" data-modal-id="myModal4">more</button>
+                </div>
               </div>
             </div>
             <div class="publishing_img">
@@ -273,10 +280,12 @@
                 <span class="lang-color s">scss</span>
                 <span class="lang-color js">js</span>
               </div>
-
               <div class="btn-group">
                 <div class="btn website">
                   <a href="https://vue3-serach-movie.netlify.app/" target="_blank">website</a>
+                </div>
+                <div class="btn popup">
+                  <button class="more__btn" data-modal-id="myModal5">more</button>
                 </div>
               </div>
 
@@ -297,12 +306,15 @@
                 <span class="lang-color c">css</span>
                 <span class="lang-color js">js</span>
               </div>
-              <div class="btn-group first">
+              <div class="btn-group">
                 <div class="btn website">
                   <a href="https://starbucks-korea-clone.netlify.app/" target="_blank">website</a>
                 </div>
                 <div class="btn demo">
                   <a href="https://www.starbucks.co.kr/index.do" target="_blank">homepage</a>
+                </div>
+                <div class="btn popup">
+                  <button class="more__btn" data-modal-id="myModal6">more</button>
                 </div>
               </div>
             </div>
@@ -322,9 +334,12 @@
                 <span class="lang-color c">css</span>
                 <span class="lang-color js">js</span>
               </div>
-              <div class="btn-group first">
+              <div class="btn-group">
                 <div class="btn website">
                   <a href="https://jocular-dusk-ee5294.netlify.app/" target="_blank">website</a>
+                </div>
+                <div class="btn popup">
+                  <button class="more__btn" data-modal-id="myModal7">more</button>
                 </div>
               </div>
             </div>
@@ -334,9 +349,126 @@
           </div>
         </div>
       </div>
+      <!-- E:PORTFOLIO -->
+      <div class="overlay">
+        <div class="modal__wrap" id="myModal1">
+          <div class="modal__body">
+            <h2>Minimal Goods</h2>
+            <div class="modal__content">
+              <ul>
+                <li>js라이브러리 <em>gsap - ScrollTrigger</em>를 사용하여 구현한 페이지입니다.
+                </li>
+                <li><em>git 협업</em>을 경험하기 위하여 팀원 1명과 총 2인으로 제작하였고<br>
+                  브랜치를 생성하여 각 브랜치에서 작업 진행, pull과 merge를 통한 깃 협업 경험을 하게 되었습니다.
+                </li>
+                <li>pc,태블릿, 모바일 사이즈 <em>반응형</em>으로 제작했습니다.</li>
+              </ul>
+              <span> - 제작기간 : 2023.06.25 ~ 07.03</span>
+              <button class="close__btn">close</button>
+            </div>
+          </div>
+        </div>
+        <!-- 모달창 1번 -->
+        <div class="modal__wrap" id="myModal2">
+          <div class="modal__body">
+            <h2>skinfood page</h2>
+            <div class="modal__content">
+              <ul>
+                <li>기존에 있던 스킨푸드 홈페이지를 <em>리디자인 + 퍼블리싱</em>을 완료했습니다.
+                </li>
+                <li>총 <em>5가지 페이지</em>를 확인하실 수 있습니다.<br>
+                  - 메인페이지, 베스트상품(미나리패드), 커뮤니티, 어바웃스킨푸드
+                </li>
+                <li>pc, 모바일 사이즈로 제작했습니다.</li>
+              </ul>
+              <span> - 제작기간 : 2023.03 ~ 2023.04</span>
+              <button class="close__btn">close</button>
+            </div>
+          </div>
+        </div>
+        <!-- 모달창 2번 -->
+        <div class="modal__wrap" id="myModal3">
+          <div class="modal__body">
+            <h2>minimal-site</h2>
+            <div class="modal__content">
+              <ul>
+                <li>디자인 데모사이트를 보고 퍼블리싱 하였습니다.
+                </li>
+                <li><em>gsap ScrollTrigger, Isotope, AOS.js</em>등 동적인 요소를 보여주는 라이브러리 사용으로 많이 들어간 사이트입니다. </li>
+                <li>총 <em>5가지 페이지</em>를 확인하실 수 있습니다.<br>
+                  - 우측상단 햄버거바를 누르면 6개의 페이지 이동 가능
+                </li>
+              </ul>
+              <span> - 제작기간 : 2023.02 ~ 2023.03</span>
+              <button class="close__btn">close</button>
+            </div>
+          </div>
+        </div>
+        <!-- 모달창 3번 -->
+        <div class="modal__wrap" id="myModal4">
+          <div class="modal__body">
+            <h2>첫번째 포트폴리오</h2>
+            <div class="modal__content">
+              <ul>
+                <li>첫번째 포트폴리오로 <em>Vue3</em>를 이용하여 제작했습니다.
+                </li>
+                <li>반응형사이트이며 <em>다크모드</em>도 같이 작업했습니다.</li>
+              </ul>
+              <span> - 제작기간 : 2022.08 ~ 2022.09</span>
+              <button class="close__btn">close</button>
+            </div>
+          </div>
+        </div>
+        <!-- 모달창 4번 -->
+        <div class="modal__wrap" id="myModal5">
+          <div class="modal__body">
+            <h2>movie serach site</h2>
+            <div class="modal__content">
+              <ul>
+                <li>패스트캠퍼스 강의를 들으며 구현한 사이트입니다.
+                </li>
+                <li>Vue3로 작업하였고,<em>OMDB웹사이트 API</em>를 가져와 <em>영화 데이터를 요청하고 받아서 프로젝트에서 출력</em>하는 작업을 진행했습니다.</li>
+              </ul>
+              <span> - 제작기간 : 2023.02 ~ 2023.04</span>
+              <button class="close__btn">close</button>
+            </div>
+          </div>
+        </div>
+        <!-- 모달창 5번 -->
+        <div class="modal__wrap" id="myModal6">
+          <div class="modal__body">
+            <h2>starbucks site</h2>
+            <div class="modal__content">
+              <ul>
+                <li>패스트캠퍼스 강의를 들으며 구현한 사이트입니다.
+                </li>
+                <li>스타벅스 홈페이지를 클론코딩하였고 HTML,CSS로 기본적인 홈페이지 마크업을 배울 수 있었습니다. </li>
+              </ul>
+              <span> - 제작기간 : 2022.09 ~ 2022.10</span>
+              <button class="close__btn">close</button>
+            </div>
+          </div>
+        </div>
+        <!-- 모달창 6번 -->
+        <div class="modal__wrap" id="myModal7">
+          <div class="modal__body">
+            <h2>waxcom</h2>
+            <div class="modal__content">
+              <ul>
+                <li>유튜브 강의를 보며 따라한 홈페이지입니다.
+                </li>
+                <li><em>swiper.js, mixitup</em>을 사용하였고, gsap을 이용하여 <em>설정한 숫자만큼 올라가는 애니메이션인 count up</em>이 되는 애니메이션을
+                  구현했습니다.</li>
+              </ul>
+              <span> - 제작기간 : 2022.08 (1주일)</span>
+              <button class="close__btn">close</button>
+            </div>
+          </div>
+        </div>
+        <!-- 모달창 7번 -->
+      </div>
+      <!-- E:MORE modal -->
     </section>
-    <!-- E:PORTFOLIO -->
-
     <section class="section" id="contact">
       <div class="inner">
         <div class="title">

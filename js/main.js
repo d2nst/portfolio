@@ -16,7 +16,7 @@ $(function () {
       swiper.mousewheel.disable();
     },
     afterLoad: function (anchorLink, index) {
-      console.log('현재 섹션 번호' + index);
+      // console.log('현재 섹션 번호' + index);
       $('header ul li').removeClass('on');
       $('header ul li:nth-child(' + index + ')').addClass('on');
 
@@ -39,6 +39,7 @@ const swiper = new Swiper('.swiper-container', {
   speed: 1000,
   autoHeight: true,
   mousewheel: true,
+  // allowTouchMove: false,
   on: {
     slideChange: function () {
       const idx = this.activeIndex;
@@ -54,20 +55,16 @@ const swiper = new Swiper('.swiper-container', {
       if (idx == 0 || idx >= length - 1) $.fn.fullpage.setAllowScrolling(true);
       // console.log('전환후 : ' + idx);
     },
-    touchMove: function (e) {
-      const startY = e.touches.startY;
-      setTimeout(function () {
-        if (startY > e.touches.currentY) swiper.slideNext();
-        else swiper.slidePrev();
-      }, 100);
-    },
+    //touchmove를 하게 되면 드래그로 슬라이드 시 오류난다. 필요시 사용
+    // touchMove: function (e) {
+    //   const startY = e.touches.startY;
+    //   setTimeout(function () {
+    //     if (startY > e.touches.currentY) swiper.slideNext();
+    //     else swiper.slidePrev();
+    //   }, 100);
+    // },
   },
 });
-
-// // portfolio 프로젝트 1번 상세페이지 리스트 펼쳐보기
-// $('button').click(function () {
-//   $('.project__list').slideToggle();
-// });
 
 // footer 년도 변경
 const thisYear = document.querySelector('.this-year');
@@ -109,3 +106,31 @@ TweenMax.staggerFrom(
   },
   0.05
 );
+
+// 모달 팝업창 만들기
+const modalBtn = document.querySelectorAll('.more__btn');
+const closeModalBtn = document.querySelector('.close__btn');
+const modalOverlay = document.querySelector('.overlay');
+
+for (let i = 0; i < modalBtn.length; i++) {
+  modalBtn[i].addEventListener('click', () => {
+    const modalId = modalBtn[i].getAttribute('data-modal-id');
+    console.log('modalId: ', modalId);
+    const modal = document.getElementById(modalId);
+    console.log('modal: ', modal);
+
+    closeModalBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      modalOverlay.style.display = 'none';
+    });
+
+    modalOverlay.addEventListener('click', () => {
+      modal.style.display = 'none';
+      modalOverlay.style.display = 'none';
+    });
+
+    modal.style.display = 'block';
+    modalOverlay.style.display = 'block';
+    $.fn.fullpage.setAllowScrolling(false);
+  });
+}

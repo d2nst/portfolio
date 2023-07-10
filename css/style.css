@@ -325,6 +325,9 @@ header nav ul li.on a::after {
 }
 
 /* --- portfolio --- */
+#portfolio {
+  position: relative !important;
+}
 #portfolio .inner .project {
   display: flex;
   justify-content: center;
@@ -355,29 +358,6 @@ header nav ul li.on a::after {
 #portfolio .project .publishing_contents p {
   font-size: 0.9375rem;
   line-height: 1.5;
-}
-
-#portfolio .project .publishing_contents button {
-  background: transparent;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  text-align: left;
-  font-size: 0.875rem;
-  color: var(--point-color);
-}
-
-#portfolio .project .publishing_contents button i {
-  margin-left: 0.3125rem;
-}
-
-#portfolio .project .publishing_contents p.project__list {
-  font-size: 0.8125rem;
-  color: var(--main-color);
-  border-top: 1px dashed #eeeeee4d;
-  border-bottom: 1px dashed #eeeeee4d;
-  margin: 0.375rem 0;
-  padding: 0.625rem 0;
 }
 
 #portfolio .project .publishing_contents .progress {
@@ -425,25 +405,19 @@ header nav ul li.on a::after {
 
 #portfolio .project .publishing_contents .btn-group {
   display: flex;
-  justify-content: space-between;
-}
-
-#portfolio .project .publishing_contents .first .btn {
-  margin-right: 0.625rem;
-}
-#portfolio .project .publishing_contents .first .btn:last-child {
-  margin-right: 0;
+  align-items: center;
 }
 
 #portfolio .project .publishing_contents .btn {
-  width: 12.5rem;
+  width: 7.5rem;
   height: 2.8125rem;
   border: 1px solid var(--main-color);
   border-radius: 0.625rem;
   text-align: center;
-  line-height: 2.8125rem;
+  line-height: 2.7rem;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
+  margin-right: 0.625rem;
 }
 
 #portfolio .project .publishing_contents .btn a {
@@ -460,8 +434,22 @@ header nav ul li.on a::after {
   border: 1px solid var(--point-color);
 }
 
-#portfolio .project .publishing_contents .btn:hover a {
+#portfolio .project .publishing_contents .btn:hover a,
+#portfolio .project .publishing_contents .btn:hover .more__btn {
   color: #fff;
+}
+
+#portfolio .project .publishing_contents .more__btn {
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--main-color);
+  font-family: var(--eng-font);
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 
 #portfolio .publishing_img {
@@ -470,6 +458,96 @@ header nav ul li.on a::after {
 
 #portfolio .publishing_img img {
   width: 100%;
+}
+/* --- modal popup --- */
+.overlay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 200%;
+  left: 0;
+  background-color: #0000007e;
+  display: none;
+  z-index: 100;
+}
+.modal__wrap {
+  width: 29rem;
+  height: 22rem;
+  padding: 3rem 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 0.625rem;
+  color: #333;
+  display: none;
+  z-index: 999;
+}
+
+.modal__body {
+  box-sizing: border-box;
+  padding: 0 3rem;
+}
+
+.modal__body h2 {
+  text-align: center;
+  color: var(--main-bgColor);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--main-bgColor);
+  padding-bottom: 10px;
+}
+
+.modal__content {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding-top: 2rem;
+  font-size: 13px;
+}
+
+.modal__content ul {
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal__content li {
+  margin-bottom: 0.385rem;
+}
+.modal__content li em {
+  font-style: normal;
+  border-radius: 5px;
+  padding: 2px 4px;
+  background-color: #e3e3e3;
+  color: var(--point-color);
+  line-height: 1.7;
+}
+
+.modal__content span {
+  display: inline-block;
+  width: 100%;
+  color: var(--main-color);
+}
+
+.close__btn {
+  outline: none;
+  border: 0.0625rem solid #865110;
+  background-color: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 5px 30px;
+  border-radius: 0.725rem;
+  margin-top: 0.9rem;
+  transition: all 0.3s ease-in;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.close__btn:hover {
+  background-color: #865110;
+  color: #fff;
 }
 
 /* --- contact --- */
