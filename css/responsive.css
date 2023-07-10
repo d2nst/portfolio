@@ -353,6 +353,12 @@
     height: auto;
     margin: 1rem auto 0;
   }
+
+  .modal__wrap {
+    width: 20rem;
+    height: 27rem;
+  }
+
   #contact h3 {
     font-size: 2.5rem;
     margin: 0;
