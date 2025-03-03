@@ -56,12 +56,13 @@ lottie.loadAnimation({
 // horizontal scroll
 gsap.registerPlugin(ScrollTrigger);
 
-window.addEventListener('load', function () {
-  let pinWrap = document.querySelector('.portfolio .inner');
-  let pinWrapWidth = pinWrap.scrollWidth; // 전체 가로 너비
-  let horizontalScrollLength = pinWrapWidth - window.innerWidth + 250;
+const mm = gsap.matchMedia();
 
-  // 가로 스크롤 애니메이션
+mm.add('(min-width: 621px)', () => {
+  let pinWrap = document.querySelector('.portfolio .inner');
+  let pinWrapWidth = pinWrap.scrollWidth;
+  let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+
   gsap.to('.portfolio .fp-auto-height', {
     x: -horizontalScrollLength, // 왼쪽 끝까지 이동
     ease: 'none',
@@ -70,15 +71,13 @@ window.addEventListener('load', function () {
       start: 'top top',
       end: () => `+=${horizontalScrollLength}`,
       pin: true,
-      scrub: 1, // 부드러운 스크롤
+      scrub: 1,
       invalidateOnRefresh: true,
-      anticipatePin: false,
     },
   });
 
   ScrollTrigger.refresh();
 });
-
 // footer 년도 변경
 const thisYear = document.querySelector('.this-year');
 thisYear.textContent = new Date().getFullYear();
@@ -119,3 +118,17 @@ modalOverlay.addEventListener('click', () => {
   modalOverlay.classList.remove('active');
   document.body.style.overflow = ''; // 스크롤 다시 활성화
 });
+gsap.fromTo(
+  '.contact .title',
+  { opacity: 0, y: 100 },
+  {
+    scrollTrigger: {
+      trigger: '.contact-title',
+      start: 'top 100%', // 뷰포트 80% 지점에서 시작
+      toggleActions: 'play none none none',
+    },
+    duration: 1,
+    opacity: 1,
+    y: 0,
+  }
+);

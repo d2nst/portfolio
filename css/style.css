@@ -318,7 +318,9 @@ body {
   width: max-content;
   gap: 4rem;
 }
-
+.portfolio-top {
+  display: none;
+}
 .project {
   display: flex;
   justify-content: center;
@@ -639,60 +641,7 @@ body {
 }
 
 .footer p {
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 0.844rem + 0.488vw, 1.4rem);
   margin: 0;
   line-height: 1.8;
-}
-
-/* media 반응형 */
-@media screen and (max-width: 620px) {
-  .intro,
-  .about {
-    padding: 6rem 3rem !important;
-  }
-  .intro-wrap {
-    flex-direction: column;
-  }
-  .intro-sub {
-    margin-bottom: 2rem;
-  }
-  .intro-desc {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .intro-desc p {
-    width: 100%;
-  }
-  .about .inner {
-    display: flex;
-    flex-direction: column;
-  }
-  .about-left {
-    position: relative;
-    top: 0;
-    margin-bottom: 5rem;
-  }
-  .about-title {
-    font-size: 5rem;
-  }
-  .portfolio {
-    padding: 4rem 2rem;
-  }
-  .project {
-    max-width: 100%;
-    flex-direction: column;
-    text-align: center;
-  }
-  .portfolio .project .publishing_contents .lang {
-    justify-content: center;
-  }
-  .portfolio .project .publishing_contents {
-    margin: 0;
-  }
-  .portfolio .publishing_img {
-    width: 25rem;
-  }
-  .portfolio .project .publishing_contents .btn-group {
-    justify-content: center;
-  }
 }
