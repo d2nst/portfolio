@@ -288,6 +288,7 @@ body {
 .list {
   list-style-type: disc;
 }
+
 .list-title {
   font-size: clamp(1.2rem, 1.044rem + 0.488vw, 1.6rem);
   font-weight: 500;
@@ -295,6 +296,7 @@ body {
   line-height: 2;
   margin-left: 1.5rem;
 }
+
 .list-item > li {
   font-size: 1.4rem;
   line-height: 1.5;
@@ -318,9 +320,11 @@ body {
   width: max-content;
   gap: 4rem;
 }
+
 .portfolio-top {
   display: none;
 }
+
 .project {
   display: flex;
   justify-content: center;
@@ -328,43 +332,43 @@ body {
   gap: 4rem;
 }
 
-.portfolio .project .publishing_contents {
+.project .publishing_contents {
   margin-left: 12rem;
 }
 
-.portfolio .project .publishing_contents p:first-child,
-.portfolio .project .publishing_contents h3 {
+.project .publishing_contents p:first-child,
+.project .publishing_contents h3 {
   color: var(--primary-color);
 }
 
-.portfolio .project .publishing_contents h3 {
+.project .publishing_contents h3 {
   margin-bottom: 1.125rem;
 }
 
-.portfolio .project .publishing_contents .category {
+.project .publishing_contents .category {
   white-space: nowrap;
 }
 
-.portfolio .project .publishing_contents p {
+.project .publishing_contents p {
   word-break: keep-all;
   line-height: 1.5;
 }
 
-.portfolio .project .publishing_contents .progress {
+.project .publishing_contents .progress {
   color: #927c5f;
 }
 
-.portfolio .project .publishing_contents .lang {
+.project .publishing_contents .lang {
   display: flex;
   align-items: center;
   margin-bottom: 2.5rem;
 }
 
-.portfolio .project .publishing_contents .lang span {
+.project .publishing_contents .lang span {
   font-size: 1.5rem;
 }
 
-.portfolio .project .publishing_contents .lang .lang-color {
+.project .publishing_contents .lang .lang-color {
   width: 6.5rem;
   height: 2.8rem;
   border-radius: 0.9375rem;
@@ -375,35 +379,35 @@ body {
   margin-top: 0.625rem;
 }
 
-.portfolio .project .publishing_contents .lang .lang-color:first-child {
+.project .publishing_contents .lang .lang-color:first-child {
   margin-left: 0;
 }
 
-.portfolio .project .publishing_contents .lang .h {
+.project .publishing_contents .lang .h {
   background: #ff6a00;
 }
-.portfolio .project .publishing_contents .lang .c {
+.project .publishing_contents .lang .c {
   background: #0051ff;
 }
-.portfolio .project .publishing_contents .lang .v {
+.project .publishing_contents .lang .v {
   background: #41b883;
 }
 
-.portfolio .project .publishing_contents .lang .s {
+.project .publishing_contents .lang .s {
   background: #cd669a;
 }
-.portfolio .project .publishing_contents .lang .js {
+.project .publishing_contents .lang .js {
   background: #ffe600;
 }
 
-.portfolio .project .publishing_contents .btn-group {
+.project .publishing_contents .btn-group {
   display: flex;
   align-items: center;
 }
 
-.portfolio .project .publishing_contents .btn {
+.project .publishing_contents .btn {
   width: 12rem;
-  height: 4rem;
+  height: auto;
   border: 1px solid var(--tertiary-color);
   border-radius: 0.625rem;
   text-align: center;
@@ -414,24 +418,24 @@ body {
   font-size: 1.6rem;
 }
 
-.portfolio .project .publishing_contents .btn a {
+.project .publishing_contents .btn a {
   display: inline-block;
   width: 100%;
   height: 100%;
   color: var(--tertiary-color);
 }
 
-.portfolio .project .publishing_contents .btn:hover {
+.project .publishing_contents .btn:hover {
   background: var(--primary-color);
   border: 1px solid var(--secondary-color);
 }
 
-.portfolio .project .publishing_contents .btn:hover a,
-.portfolio .project .publishing_contents .btn:hover .more__btn {
+.project .publishing_contents .btn:hover a,
+.project .publishing_contents .btn:hover .more__btn {
   color: var(--secondary-color);
 }
 
-.portfolio .project .publishing_contents .more__btn {
+.project .publishing_contents .more__btn {
   background: transparent;
   outline: none;
   border: none;
@@ -443,11 +447,11 @@ body {
   font-size: 1.6rem;
 }
 
-.portfolio .publishing_img {
+.publishing_img {
   width: 38rem;
 }
 
-.portfolio .publishing_img img {
+.publishing_img img {
   width: 100%;
 }
 /* --- modal popup --- */
@@ -581,11 +585,13 @@ body {
   font-weight: 900;
   font-size: clamp(1.8rem, 0.395rem + 4.39vw, 5.4rem);
 }
+
 .contact .contact-tit-p {
   margin-top: 1.4rem;
   font-size: clamp(1.4rem, 1.088rem + 0.976vw, 2.2rem);
   color: var(--tertiary-color);
 }
+
 .contact .infor {
   text-align: center;
   display: flex;
