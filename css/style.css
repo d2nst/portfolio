@@ -34,7 +34,6 @@ body {
   color: var(--tertiary-color);
   background-color: var(--secondary-color);
   width: 100%;
-  /* height: 100%; */
   font-size: 10px;
   font-weight: 400;
   display: flex;
@@ -45,7 +44,6 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  overflow: hidden;
 }
 
 .inner {
@@ -309,7 +307,10 @@ body {
   position: relative;
   background: var(--secondary-color);
   padding: 6rem 8rem;
-  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fp-auto-height {
@@ -322,13 +323,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 1140px;
   gap: 4rem;
 }
 
 .portfolio .project .publishing_contents {
-  margin-left: 16rem;
+  margin-left: 12rem;
 }
 
 .portfolio .project .publishing_contents p:first-child,
@@ -466,7 +465,8 @@ body {
   display: block;
 }
 .modal__wrap {
-  width: 100%;
+  width: 50rem;
+  height: auto;
   padding: 3rem 0;
   position: absolute;
   top: 50%;
@@ -474,17 +474,16 @@ body {
   transform: translate(-50%, -50%);
   background-color: var(--tertiary-color);
   border-radius: 0.625rem;
-  color: #333;
+  color: var(--secondary-color);
   display: none;
   z-index: 999;
   opacity: 0;
-  transform: scale(0.9);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .modal__body {
   box-sizing: border-box;
-  padding: 0 3rem;
+  padding: 2rem 3rem;
 }
 
 .modal__body h2 {
@@ -538,7 +537,7 @@ body {
   margin-top: 0.9rem;
   transition: all 0.3s ease-in;
   position: absolute;
-  bottom: 10%;
+  bottom: 1rem;
   left: 50%;
   transform: translate(-50%);
 }
@@ -552,30 +551,39 @@ body {
 .modal__wrap.active {
   display: block;
   opacity: 1;
-  transform: scale(1);
 }
 
 /* --- contact --- */
 .contact {
-  text-align: center;
+  display: flex;
+  height: 100vh;
   padding: 6rem 8rem;
+  align-items: center;
+  justify-content: center;
 }
-
-.contact .title {
-  position: relative;
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
+.contact .inner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .contact .contact-tit,
 .contact .contact-tit-p {
   color: var(--primary-color);
-  font-weight: 900;
-  font-size: clamp(1.4rem, 1.166rem + 0.732vw, 2rem);
-  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
 }
 
+.contact .contact-tit {
+  font-weight: 900;
+  font-size: clamp(1.8rem, 0.395rem + 4.39vw, 5.4rem);
+}
+.contact .contact-tit-p {
+  margin-top: 1.4rem;
+  font-size: clamp(1.4rem, 1.088rem + 0.976vw, 2.2rem);
+  color: var(--tertiary-color);
+}
 .contact .infor {
   text-align: center;
   display: flex;
@@ -631,7 +639,7 @@ body {
 }
 
 .footer p {
-  font-size: 0.875rem;
+  font-size: 1.4rem;
   margin: 0;
   line-height: 1.8;
 }
@@ -655,7 +663,6 @@ body {
   .intro-desc p {
     width: 100%;
   }
-
   .about .inner {
     display: flex;
     flex-direction: column;

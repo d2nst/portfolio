@@ -2,7 +2,7 @@
 
 // lenis
 const lenis = new Lenis({
-  duration: 1.1, // 기본 1, 값을 높이면 스크롤이 더 천천히 이동
+  duration: 1.3, // 기본 1, 값을 높이면 스크롤이 더 천천히 이동
   smoothWheel: true, // 휠 스크롤 부드럽게 적용
   smoothTouch: false, // 모바일 터치 스크롤 부드럽게 설정 (원하는 경우 true)
 });
@@ -59,7 +59,7 @@ gsap.registerPlugin(ScrollTrigger);
 window.addEventListener('load', function () {
   let pinWrap = document.querySelector('.portfolio .inner');
   let pinWrapWidth = pinWrap.scrollWidth; // 전체 가로 너비
-  let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+  let horizontalScrollLength = pinWrapWidth - window.innerWidth + 250;
 
   // 가로 스크롤 애니메이션
   gsap.to('.portfolio .fp-auto-height', {
@@ -68,11 +68,11 @@ window.addEventListener('load', function () {
     scrollTrigger: {
       trigger: '.portfolio',
       start: 'top top',
-      end: () => `+=${horizontalScrollLength}`, // 가로 스크롤이 끝나는 지점을 정확히 조정
+      end: () => `+=${horizontalScrollLength}`,
       pin: true,
       scrub: 1, // 부드러운 스크롤
       invalidateOnRefresh: true,
-      anticipatePin: 1,
+      anticipatePin: false,
     },
   });
 
