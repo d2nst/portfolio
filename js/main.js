@@ -2,8 +2,7 @@
 
 // lenis
 const lenis = new Lenis({
-  duration: 1.4, // 기본 1, 값을 높이면 스크롤이 더 천천히 이동
-  easing: (t) => 1 - Math.pow(1 - t, 3), // 부드러운 감속 효과
+  duration: 1.1, // 기본 1, 값을 높이면 스크롤이 더 천천히 이동
   smoothWheel: true, // 휠 스크롤 부드럽게 적용
   smoothTouch: false, // 모바일 터치 스크롤 부드럽게 설정 (원하는 경우 true)
 });
@@ -69,10 +68,12 @@ window.addEventListener('load', function () {
     scrollTrigger: {
       trigger: '.portfolio',
       start: 'top top',
-      end: () => `+=${pinWrapWidth + window.innerWidth}`,
+      end: () => `+=${horizontalScrollLength}`, // 가로 스크롤이 끝나는 지점을 정확히 조정
       pin: true,
       scrub: 1, // 부드러운 스크롤
-      invalidateOnRefresh: true, // 창 크기 변경 시 자동 업데이트
+      pinSpacing: true,
+      invalidateOnRefresh: true,
+      anticipatePin: 1,
     },
   });
 
@@ -83,50 +84,39 @@ window.addEventListener('load', function () {
 const thisYear = document.querySelector('.this-year');
 thisYear.textContent = new Date().getFullYear();
 
-// * mouse cursor custom start *
-let mousePointer = document.querySelector('.cursor');
-let mouseHover = document.querySelectorAll('[data-cursor-class]');
+// 모든 모달 버튼과 닫기 버튼 가져오기
+const modalBtns = document.querySelectorAll('.more__btn');
+const modalOverlay = document.querySelector('.overlay');
 
-window.addEventListener('mousemove', cursor);
+// 모달 열기 버튼 이벤트 추가
+modalBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const modalId = btn.getAttribute('data-modal-id'); // 해당 버튼의 모달 ID 가져오기
+    const modal = document.getElementById(modalId); // 모달 찾기
 
-function cursor(e) {
-  mousePointer.style.top = e.pageY + 'px';
-  mousePointer.style.left = e.pageX + 'px';
-}
-
-mouseHover.forEach((link) => {
-  link.addEventListener('mouseleave', () => {
-    mousePointer.classList.remove('link-grow');
-  });
-  link.addEventListener('mouseover', () => {
-    mousePointer.classList.add('link-grow');
+    if (modal) {
+      modal.classList.add('active'); // 모달 활성화
+      modalOverlay.classList.add('active'); // 오버레이 활성화
+      document.body.style.overflow = 'hidden'; // 스크롤 방지
+    }
   });
 });
 
-// 모달 팝업창 만들기
-const modalBtn = document.querySelectorAll('.more__btn');
-const closeModalBtn = document.querySelector('.close__btn');
-const modalOverlay = document.querySelector('.overlay');
-
-for (let i = 0; i < modalBtn.length; i++) {
-  modalBtn[i].addEventListener('click', () => {
-    const modalId = modalBtn[i].getAttribute('data-modal-id');
-    console.log('modalId: ', modalId);
-    const modal = document.getElementById(modalId);
-    console.log('modal: ', modal);
-
-    closeModalBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-      modalOverlay.style.display = 'none';
-    });
-
-    modalOverlay.addEventListener('click', () => {
-      modal.style.display = 'none';
-      modalOverlay.style.display = 'none';
-    });
-
-    modal.style.display = 'block';
-    modalOverlay.style.display = 'block';
-    $.fn.fullpage.setAllowScrolling(false);
+// 닫기 버튼 이벤트 추가
+document.querySelectorAll('.close__btn').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const modal = btn.closest('.modal__wrap'); // 현재 모달 찾기
+    modal.classList.remove('active');
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // 스크롤 다시 활성화
   });
-}
+});
+
+// 오버레이 클릭 시 닫기 기능 추가
+modalOverlay.addEventListener('click', () => {
+  document.querySelectorAll('.modal__wrap.active').forEach((modal) => {
+    modal.classList.remove('active');
+  });
+  modalOverlay.classList.remove('active');
+  document.body.style.overflow = ''; // 스크롤 다시 활성화
+});

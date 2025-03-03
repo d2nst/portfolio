@@ -15,7 +15,7 @@ h2 {
   font-weight: 900;
 }
 h3 {
-  font-size: clamp(1.6rem, 1.288rem + 0.976vw, 2.4rem);
+  font-size: clamp(1.8rem, 1.41rem + 1.22vw, 2.8rem);
   font-weight: 700;
 }
 h4 {
@@ -51,35 +51,6 @@ body {
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
-}
-
-/* slideNav span */
-#fp-nav ul li a span,
-.fp-slidesNav ul li a span {
-  background: var(--tertiary-color);
-}
-
-/* 커스텀 커서 스타일 정의해주기 */
-.cursor {
-  width: 2rem;
-  height: 2rem;
-  border: 0.125rem solid var(--primary-color);
-  border-radius: 50%;
-  position: absolute;
-  z-index: 1000;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: all 0.3s ease;
-  transition-property: background, transform;
-  transform-origin: 100% 100%;
-  backdrop-filter: sepia(20%);
-  background-size: cover;
-}
-
-.link-grow {
-  transform: scale(3);
-  background-color: var(--primary-color);
-  border: none;
 }
 
 /* --- hero --- */
@@ -192,6 +163,9 @@ body {
 
 .intro-sub {
   margin-bottom: 4rem;
+}
+.intro-title {
+  margin-bottom: 1.3rem;
 }
 
 .intro-sub span {
@@ -338,27 +312,26 @@ body {
 }
 
 /* 내부 레이아웃 */
-.portfolio .inner {
-  width: 100vw;
-  overflow: hidden;
-}
 
 /* 가로 스크롤을 위한 스타일 */
 .fp-auto-height {
   display: flex;
-  width: max-content; /* 가로 스크롤이 가능하도록 전체 너비 자동 설정 */
+  width: max-content;
+  height: 100vh;
   gap: 4rem;
 }
 
 /* 각 프로젝트 카드 스타일 */
 .project {
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 100vw;
+  align-content: center;
+  width: 100%;
   max-width: 1140px;
+  height: 500px;
   flex-shrink: 0;
   gap: 4rem;
+  min-height: 100vh;
 }
 
 .portfolio .project .publishing_contents {
@@ -477,7 +450,7 @@ body {
 }
 
 .portfolio .publishing_img {
-  width: 50rem;
+  width: 38rem;
 }
 
 .portfolio .publishing_img img {
@@ -488,15 +461,19 @@ body {
   width: 100%;
   height: 100vh;
   position: fixed;
-  top: 200%;
+  top: 0;
   left: 0;
   background-color: #0000007e;
   display: none;
-  z-index: 100;
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out;
+}
+/* 오버레이 활성화 상태 */
+.overlay.active {
+  display: block;
 }
 .modal__wrap {
-  width: 29rem;
-  height: 22rem;
+  width: 100%;
   padding: 3rem 0;
   position: absolute;
   top: 50%;
@@ -507,6 +484,9 @@ body {
   color: #333;
   display: none;
   z-index: 999;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .modal__body {
@@ -518,15 +498,16 @@ body {
   text-align: center;
   color: var(--secondary-color);
   text-transform: uppercase;
+  font-size: 1.8rem;
   border-bottom: 1px solid var(--secondary-color);
-  padding-bottom: 10px;
+  padding-bottom: 1rem;
 }
 
 .modal__content {
   font-size: 0.875rem;
   line-height: 1.5;
   padding-top: 2rem;
-  font-size: 13px;
+  font-size: 1.3rem;
 }
 
 .modal__content ul {
@@ -543,7 +524,7 @@ body {
   border-radius: 5px;
   padding: 2px 4px;
   background-color: #e3e3e3;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   line-height: 1.7;
 }
 
@@ -572,6 +553,13 @@ body {
 .close__btn:hover {
   background-color: #865110;
   color: var(--tertiary-color);
+}
+
+/* 모달 활성화 상태 */
+.modal__wrap.active {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
 }
 
 /* --- contact --- */
