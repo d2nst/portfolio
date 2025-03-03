@@ -61,7 +61,7 @@ const mm = gsap.matchMedia();
 mm.add('(min-width: 621px)', () => {
   let pinWrap = document.querySelector('.portfolio .inner');
   let pinWrapWidth = pinWrap.scrollWidth;
-  let horizontalScrollLength = pinWrapWidth - window.innerWidth + 100;
+  let horizontalScrollLength = pinWrapWidth - window.innerWidth + 150;
 
   gsap.to('.portfolio .fp-auto-height', {
     x: -horizontalScrollLength, // 왼쪽 끝까지 이동
