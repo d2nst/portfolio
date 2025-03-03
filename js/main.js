@@ -71,7 +71,6 @@ window.addEventListener('load', function () {
       end: () => `+=${horizontalScrollLength}`, // 가로 스크롤이 끝나는 지점을 정확히 조정
       pin: true,
       scrub: 1, // 부드러운 스크롤
-      pinSpacing: true,
       invalidateOnRefresh: true,
       anticipatePin: 1,
     },
