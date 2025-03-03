@@ -318,7 +318,7 @@ body {
 .fp-auto-height {
   display: flex;
   width: max-content;
-  gap: 4rem;
+  gap: 10rem;
 }
 
 .portfolio-top {
@@ -329,7 +329,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 16rem;
 }
 
 .project .publishing_contents {
@@ -352,6 +352,7 @@ body {
 .project .publishing_contents p {
   word-break: keep-all;
   line-height: 1.5;
+  font-size: clamp(1.2rem, 1.044rem + 0.488vw, 1.6rem);
 }
 
 .project .publishing_contents .progress {
@@ -562,7 +563,7 @@ body {
 /* --- contact --- */
 .contact {
   display: flex;
-  height: 100vh;
+  height: auto;
   padding: 6rem 8rem;
   align-items: center;
   justify-content: center;
@@ -571,7 +572,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .contact .contact-tit,

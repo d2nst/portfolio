@@ -39,7 +39,7 @@ tl.to('body', { overflow: 'hidden' })
 ScrollTrigger.create({
   trigger: '.hero',
   start: 'top top',
-  // pin: true,
+  pin: true,
   // markers: true,
   pinSpacing: false,
   anticipatePin: 1,
@@ -61,7 +61,7 @@ const mm = gsap.matchMedia();
 mm.add('(min-width: 621px)', () => {
   let pinWrap = document.querySelector('.portfolio .inner');
   let pinWrapWidth = pinWrap.scrollWidth;
-  let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+  let horizontalScrollLength = pinWrapWidth - window.innerWidth + 100;
 
   gsap.to('.portfolio .fp-auto-height', {
     x: -horizontalScrollLength, // 왼쪽 끝까지 이동
