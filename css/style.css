@@ -657,7 +657,8 @@ body {
 
 /* media 반응형 */
 @media screen and (max-width: 620px) {
-  section {
+  .intro,
+  .about {
     padding: 6rem 3rem !important;
   }
   .intro-wrap {
@@ -684,6 +685,26 @@ body {
     margin-bottom: 5rem;
   }
   .about-title {
-    font-size: 7rem;
+    font-size: 5rem;
+  }
+  .portfolio {
+    padding: 4rem 2rem;
+  }
+  .project {
+    max-width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+  .portfolio .project .publishing_contents .lang {
+    justify-content: center;
+  }
+  .portfolio .project .publishing_contents {
+    margin: 0;
+  }
+  .portfolio .publishing_img {
+    width: 25rem;
+  }
+  .portfolio .project .publishing_contents .btn-group {
+    justify-content: center;
   }
 }
