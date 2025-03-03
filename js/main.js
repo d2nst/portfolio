@@ -1,69 +1,82 @@
-$(function () {
-  $('#fullpage').fullpage({
-    anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-    menu: '#myMenu',
-    navigation: true,
-    navigationPosition: 'right',
-    scrollingSpeed: 1000,
-    onLeave: function (origin, destination, direction) {
-      // 빠른전환으로 이벤트중복시 fullpage와 swiper전환시점 분리막기
-      $('#fullpage').on('scroll', function (event) {
-        event.preventDefault();
-        event.stopPropagation();
-        return false;
-      });
+'use-stric';
 
-      swiper.mousewheel.disable();
-    },
-    afterLoad: function (anchorLink, index) {
-      // console.log('현재 섹션 번호' + index);
-      $('header ul li').removeClass('on');
-      $('header ul li:nth-child(' + index + ')').addClass('on');
-
-      $('#fullpage').off('scroll mousewheel');
-      if (!$('.fp-completely .swiper-wrapper').length > 0)
-        $('#fullpage').off('touchmove'); // 모바일분기
-      if (swiper) swiper.mousewheel.enable();
-      if (!$('#portfolio').hasClass('active'))
-        $.fn.fullpage.setAllowScrolling(true);
-    },
-  });
+// lenis
+const lenis = new Lenis({
+  duration: 1.4, // 기본 1, 값을 높이면 스크롤이 더 천천히 이동
+  easing: (t) => 1 - Math.pow(1 - t, 3), // 부드러운 감속 효과
+  smoothWheel: true, // 휠 스크롤 부드럽게 적용
+  smoothTouch: false, // 모바일 터치 스크롤 부드럽게 설정 (원하는 경우 true)
 });
 
-// swiper
-const length = $('#portfolio .swiper-slide').length;
-const swiper = new Swiper('.swiper-container', {
-  slidesPerView: 1,
-  spaceBetween: 150,
-  freeMode: false,
-  speed: 1000,
-  autoHeight: true,
-  mousewheel: true,
-  // allowTouchMove: false,
-  on: {
-    slideChange: function () {
-      const idx = this.activeIndex;
-      // 처음과 마지막 슬라이드가 아닐경우 fullpage전환 막기
-      if (this.activeIndex != 0 && idx != length)
-        $.fn.fullpage.setAllowScrolling(false);
-      if (length == 7 && idx == 0) $.fn.fullpage.setAllowScrolling(false); //슬라이드가 4개밖에 없을때
-      // console.log('즉시 : ' + idx);
+lenis.on('scroll', ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+
+gsap.ticker.lagSmoothing(0);
+
+lenis.stop();
+
+// 첫 화면 scroll animation
+gsap.registerPlugin(ScrollTrigger);
+gsap.set('.visual-introwrap', { autoAlpha: 0, y: 100 });
+
+const tl = gsap.timeline();
+
+tl.to('body', { overflow: 'hidden' })
+  .to('.visual-titlewrap', { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', ease: 'power2.out', scale: 1 })
+  .to('.visual-titlewrap', { autoAlpha: 0, duration: 1.2 }, '+=2')
+  .to('.visual-titlewrap', { display: 'none' }, '+=1')
+  .to('.visual-introwrap', { display: 'flex', autoAlpha: 1, y: 0, duration: 1 })
+  .to('.visual-list .list-item', { autoAlpha: 1, stagger: 0.3, duration: 1 })
+  .to('body', { overflowY: 'scroll' })
+  .to('.scrolldown-lottie', { autoAlpha: 1 })
+  .add(() => {
+    console.log('Lenis 시작!');
+    lenis.start();
+  });
+
+ScrollTrigger.create({
+  trigger: '.hero',
+  start: 'top top',
+  // pin: true,
+  // markers: true,
+  pinSpacing: false,
+  anticipatePin: 1,
+});
+
+lottie.loadAnimation({
+  container: document.querySelector('.scrolldown-lottie'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: './assets/lottie/scrolldown.json',
+});
+
+// horizontal scroll
+gsap.registerPlugin(ScrollTrigger);
+
+window.addEventListener('load', function () {
+  let pinWrap = document.querySelector('.portfolio .inner');
+  let pinWrapWidth = pinWrap.scrollWidth; // 전체 가로 너비
+  let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+
+  // 가로 스크롤 애니메이션
+  gsap.to('.portfolio .fp-auto-height', {
+    x: -horizontalScrollLength, // 왼쪽 끝까지 이동
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.portfolio',
+      start: 'top top',
+      end: () => `+=${pinWrapWidth + window.innerWidth}`,
+      pin: true,
+      scrub: 1, // 부드러운 스크롤
+      invalidateOnRefresh: true, // 창 크기 변경 시 자동 업데이트
     },
-    slideChangeTransitionEnd: function () {
-      const idx = this.activeIndex;
-      // 처음과 마지막 슬라이드일 경우 fullpage전환 풀기
-      if (idx == 0 || idx >= length - 1) $.fn.fullpage.setAllowScrolling(true);
-      // console.log('전환후 : ' + idx);
-    },
-    //touchmove를 하게 되면 드래그로 슬라이드 시 오류난다. 필요시 사용
-    // touchMove: function (e) {
-    //   const startY = e.touches.startY;
-    //   setTimeout(function () {
-    //     if (startY > e.touches.currentY) swiper.slideNext();
-    //     else swiper.slidePrev();
-    //   }, 100);
-    // },
-  },
+  });
+
+  ScrollTrigger.refresh();
 });
 
 // footer 년도 변경
@@ -89,23 +102,6 @@ mouseHover.forEach((link) => {
     mousePointer.classList.add('link-grow');
   });
 });
-
-// home 부분 텍스트 애니메이션
-Splitting();
-
-TweenMax.staggerFrom(
-  '.char',
-  1.7,
-  {
-    y: 70,
-    rotation: 90,
-    rotationX: -50,
-    opacity: 0,
-    transformOrigin: '50% 50%',
-    ease: Back.easeInOut.config(1.7),
-  },
-  0.05
-);
 
 // 모달 팝업창 만들기
 const modalBtn = document.querySelectorAll('.more__btn');

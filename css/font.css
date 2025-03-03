@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 900;
+  font-style: normal;
+  src: url('../assets/fonts/SUIT-woff2/SUIT-ExtraBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../assets/fonts/SUIT-woff2/SUIT-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 500;
+  font-style: normal;
+  src: url('../assets/fonts/SUIT-woff2/SUIT-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../assets/fonts/SUIT-woff2/SUIT-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 300;
+  font-style: normal;
+  src: url('../assets/fonts/SUIT-woff2/SUIT-Thin.woff2') format('woff2');
+}
